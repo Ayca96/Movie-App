@@ -1,14 +1,33 @@
+import {toast} from "react-toastify"
 
-import { toast } from 'react-toastify';
 
-toast.success('🦄 Wow so easy!', {
-  position: "top-right",
+export const toastSuccess=(msg)=>{
+    toast.success(msg, {
   autoClose: 5000,
   hideProgressBar: false,
   closeOnClick: true,
   pauseOnHover: true,
   draggable: true,
   progress: undefined,
-  theme: "light",
-  transition: Bounce,
+});} 
+
+export const toastWarn = (msg) => {
+  toast.warn(msg, {
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
   });
+};
+export const toastError = (msg) => {
+  toast.error(msg, {
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
+};
