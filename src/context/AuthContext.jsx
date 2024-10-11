@@ -73,7 +73,7 @@ useEffect(()=>{
 
     signInWithPopup(auth, provider)
       .then((result) => {
-        toastSuccess("Google ile giriş başarılı");
+        toastSuccess("Successful login with Google");
         navigate("/");
       })
       .catch((error) => {

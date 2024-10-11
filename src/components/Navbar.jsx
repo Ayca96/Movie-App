@@ -1,9 +1,8 @@
 import { Fragment, useContext } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
-import avatar from "../assets/icons/avatar.png";
+import avatar from "../assets/icons/popcorn.avif";
 import { AuthContextt } from "../context/AuthContext";
-import Logo from "../assets/icons/Cinema.png"
 
 
 //tailwindui.com/components/preview navigation, mobile menu button, open, Disclosure.Panel sil
@@ -41,7 +40,7 @@ const{currentUser,cikis}=useContext(AuthContextt)
                   <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                     <img
                       className="h-8 w-8 rounded-full"
-                      src={currentUser?.photoURL || avatar}
+                      src={ avatar}
                       referrerPolicy="no-referrer"
                       alt=""
                     />
