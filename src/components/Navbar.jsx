@@ -3,7 +3,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import avatar from "../assets/icons/avatar.png";
 import { AuthContextt } from "../context/AuthContext";
-
+import Logo from "../assets/icons/Cinema.png"
 
 
 //tailwindui.com/components/preview navigation, mobile menu button, open, Disclosure.Panel sil
@@ -24,12 +24,12 @@ const{currentUser,cikis}=useContext(AuthContextt)
     <>
       <Disclosure
         as="nav"
-        className="bg-neutral-100 dark:bg-gray-900 py-3 dark:text-white fixed top-0 w-full z-20 "
+        className="bg-neutral-200 dark:bg-gray-900 py-3 dark:text-white fixed top-0 w-full z-20 "
       >
         <div className="mx-auto px-2 sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-between">
             <Link className="pr-2 text-2xl font-semibold" to="/">
-              React Movie App
+              Movie Time 🍿
             </Link>
             <div className="absolute inset-y-0 right-0 flex items-center">
               {/* kullanıcı giriş yaptıysa displayName ekranda görünsün */}

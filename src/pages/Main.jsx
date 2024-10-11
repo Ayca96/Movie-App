@@ -21,11 +21,11 @@ getirMovies(SEARCH_API + query)
 }
 
   return (
-    <div>
+    <div className="bg-[#282c34]">
       <form onSubmit={handleSubmit} className="flex justify-center p-2" >
         <input
           type="search"
-          className="w-80 h-8 rounded-md p-1 m-2"
+          className="w-80 h-8 rounded-md p-1 m-2, text-red-500 "
           placeholder="Search a movie..."
          onChange={(e)=>setQuery(e.target.value)}
         />
