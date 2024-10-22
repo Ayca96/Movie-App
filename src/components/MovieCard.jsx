@@ -2,11 +2,14 @@ import React, { useContext } from 'react'
 import { AuthContextt } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
-const MovieCard = ({id,title,overview, poster_path,vote_average}) => {
-  
-  
+const MovieCard = ({id,title,overview, poster_path,vote_average,posts,loading}) => {
+
 const{currentUser}=useContext(AuthContextt)
  const navigate = useNavigate();
+
+ if(loading){
+  return <h2 style={{marginTop:'200px', color:'pink'}}>loading.....</h2>
+}
   return (
     <div className="movie" id="container"
     onClick={()=>navigate("details/"+id)}

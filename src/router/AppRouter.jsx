@@ -6,6 +6,7 @@ import Register from "../pages/Register";
 import Main from "../pages/Main";
 import MovieDetail from "../pages/MovieDetail";
 import PrivateRouter from "./PrivateRouter";
+import NotFound from '../pages/NotFound';
 // toastContainer de Browser da görünsün diye browserRouter sarmalını üst component olan indexedDB.js de yaptık
 const AppRouter = () => {
   return (
@@ -24,6 +25,8 @@ const AppRouter = () => {
 <Route path="" element={<MovieDetail/>} />
 
 </Route>
+
+<Route path="*" element={<NotFound />} />
 
 </Routes>
 
