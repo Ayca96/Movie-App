@@ -18,19 +18,7 @@ const Main = () => {
     getirMovies(SEARCH_API + query);
   }
 
-  const[currentPage,setCurrentPage]=useState(1)
- const[postsPerPage]=useState(6)
-
- // Get current post
-
-const indexofLastPost= currentPage * postsPerPage
-const indexOfFirstPost = indexofLastPost - postsPerPage
-const currentPosts = movies.slice(indexOfFirstPost, indexofLastPost)
-
-// Change Page
-
-const paginate = (pageNumber) => setCurrentPage(pageNumber)
-
+ 
   return (
     <div className="bg-[#282c34] min-h-screen">
       <form onSubmit={handleSubmit} className="flex justify-center p-2" >
@@ -45,40 +33,24 @@ const paginate = (pageNumber) => setCurrentPage(pageNumber)
         </button>
       </form>
 
-      <div className="flex justify-center flex-wrap">
-        {/* loading true ise (apiden veriler gelmeden önce) loading resmi görünsün, false olduğunda movies cardlar */}
-
-        {loading ? (
-          <div
-            className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-600 mt-52 flex items-center justify-center"
-            role="status"
-          >
-            <span className="sr-only">Yükleniyor...</span>
-          </div>
-        ) : (
-          movies.map((movie) => <MovieCard posts={currentPosts} loading={loading} key={movie.id} {...movie} />)
-        )}
-      </div>
-
-      <div className="flex items-center justify-between border-t border-gray-200 bg-[#282c34] px-4 py-3 sm:px-6">
+      {/* burda slacke attigim moviecard kismi vardi */}
+      {/* <div className="flex items-center justify-between border-t border-gray-200 bg-[#282c34] px-4 py-3 sm:px-6">
         <div className="flex flex-1 justify-between sm:hidden">
           <button className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</button>
           <button className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</button>
         </div>
         <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
-          <div>
+          <div className="footer">
             <p className="text-sm text-red-600">
               Showing Results
             </p>
+            
           </div>
-          <div>
          
-            <Pagination postsPerPage={postsPerPage}
-      totalPosts={movies.length}
-      paginate={paginate}/>
-          </div>
         </div>
-      </div>
+      </div> */}
+
+      <Pagination/>
     </div>
   );
 };
