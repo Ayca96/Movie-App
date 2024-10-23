@@ -20,7 +20,7 @@ const Main = () => {
 
  
   return (
-    <div className="bg-[#282c34] min-h-screen">
+    <div className="bg-[#a06148] min-h-screen">
       <form onSubmit={handleSubmit} className="flex justify-center p-2" >
         <input
           type="search"

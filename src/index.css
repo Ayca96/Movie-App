@@ -42,9 +42,9 @@ body {
 
 /* MovieCard Custom CSS */
 .movie {
-  background-color: #080f36;
+  background-color: #313a70;
   border-radius: 3px;
-  box-shadow: 4px 4px 5px rgba(63, 60, 60, 0.5);
+  box-shadow: 10px 10px 10px rgba(63, 60, 60, 0.5);
   overflow: hidden;
   margin: 1rem;
   width: 300px;

@@ -23,7 +23,7 @@ const{currentUser,cikis}=useContext(AuthContextt)
     <>
       <Disclosure
         as="nav"
-        className="bg-neutral-200 dark:bg-gray-900 py-3 dark:text-white fixed top-0 w-full z-20 "
+        className="bg-[#eec3b2] dark:bg-gray-900 py-3 dark:text-white fixed top-0 w-full z-20 "
       >
         <div className="mx-auto px-2 sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-between">
