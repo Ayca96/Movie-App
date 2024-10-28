@@ -10,7 +10,7 @@ const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}
 
 const Main = () => {
 
-  const { movies, loading, getirMovies,currentPage,totalPage } = useContext(MovieContextt);
+  const { getirMovies,currentPage,totalPage } = useContext(MovieContextt);
 
   const [query, setQuery] = useState("");
 

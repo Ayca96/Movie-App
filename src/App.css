@@ -57,12 +57,22 @@ align-items: center;
  } */
 
 
+ .notFoundContainer{
+
+ 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #61dafb;
+ padding: 4rem;
+ }
+
  .notfoundImage{
-  background-image: url(../src/assets/icons/404-error-found-cat-is-sitting-holding-plug-from-outlet_626340-65.avif);
-  width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  width: 60rem;
+  height: 48rem;
+  border-radius: 2rem;
+  
+  
  object-fit: cover;
  }
