@@ -8,6 +8,8 @@ const {id}= useParams()
 const[filmdetail, setFilmDetail]=useState("")
 
 const {title, poster_path, overview, vote_average, release_date, vote_count}=filmdetail
+console.log(filmdetail);
+
 
   const API_KEY = process.env.REACT_APP_TMDB_KEY;
 
