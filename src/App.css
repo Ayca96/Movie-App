@@ -55,3 +55,11 @@ align-items: center;
 
 
  } */
+
+/* 
+ .notfoundImage{
+  background-image: url(../src/assets/icons/notfound.webp);
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+ } */
