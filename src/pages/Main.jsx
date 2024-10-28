@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { MovieContextt } from "../context/MovieContext";
 import MovieCard from "../components/MovieCard";
 import Pagination from "../components/Pagination";
+import NotFound from "./NotFound";
 
 
 const API_KEY = process.env.REACT_APP_TMDB_KEY;
@@ -9,7 +10,7 @@ const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}
 
 const Main = () => {
 
-  const { movies, loading, getirMovies } = useContext(MovieContextt);
+  const { movies, loading, getirMovies,currentPage,totalPage } = useContext(MovieContextt);
 
   const [query, setQuery] = useState("");
 
@@ -17,7 +18,11 @@ const Main = () => {
     e.preventDefault();
     getirMovies(SEARCH_API + query);
   }
+ 
+  if(currentPage>totalPage){
 
+    return <NotFound/>
+  }
  
   return (
     <div className="bg-[#a06148] min-h-screen">

@@ -56,10 +56,13 @@ align-items: center;
 
  } */
 
-/* 
+
  .notfoundImage{
-  background-image: url(../src/assets/icons/notfound.webp);
-  width: 100%;
+  background-image: url(../src/assets/icons/404-error-found-cat-is-sitting-holding-plug-from-outlet_626340-65.avif);
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
- } */
+ object-fit: cover;
+ }

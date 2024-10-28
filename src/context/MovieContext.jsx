@@ -13,6 +13,16 @@ const MovieContext = ({children}) => {
 const [movies,setMovies]=useState([])
 const [loading,setLoading]=useState(false)
 
+const[currentPage,setCurrentPage]=useState(1)
+
+
+  const itemsPerPage = 10; // Her sayfada kaç öğe gösterilecek
+  const totalPage = movies.length / itemsPerPage
+  
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const displayedItems = movies.slice(startIndex, endIndex);
+
 
 useEffect(()=>{getirMovies(BASE_URL)},[])
 
@@ -24,7 +34,7 @@ setLoading(true)
 
 
   return (
-    <MovieContextt.Provider value={{movies,loading,getirMovies}}>{children}</MovieContextt.Provider>
+    <MovieContextt.Provider value={{movies,loading,getirMovies,currentPage,displayedItems,totalPage,itemsPerPage,startIndex,endIndex,setCurrentPage}}>{children}</MovieContextt.Provider>
   )
 }
 
