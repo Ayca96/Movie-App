@@ -16,6 +16,7 @@ const [loading,setLoading]=useState(false)
 const[currentPage,setCurrentPage]=useState(1)
 
 
+
   const itemsPerPage = 10; // Her sayfada kaç öğe gösterilecek
   const totalPage = movies.length / itemsPerPage
   

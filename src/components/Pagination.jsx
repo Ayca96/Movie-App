@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "../App.css"
 import { useParams, Link } from 'react-router-dom';
 import { MovieContextt } from '../context/MovieContext';
@@ -9,7 +9,13 @@ const Pagination = () => {
   const {movies,loading,displayedItems,totalPage,currentPage,itemsPerPage,setCurrentPage}=useContext(MovieContextt)
   const { pageNumber } = useParams();
    
-  setCurrentPage (pageNumber ? parseInt(pageNumber, 10) : 1)
+  useEffect(() => {
+    if (pageNumber) {
+      setCurrentPage(parseInt(pageNumber, 10));
+    } else {
+      setCurrentPage(1); // Varsayılan sayfa
+    }
+  }, [pageNumber, setCurrentPage]);
 
 //console.log(displayedItems);
   
