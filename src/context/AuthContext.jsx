@@ -82,6 +82,15 @@ useEffect(()=>{
   };
 
   //? Kullanıcının signin olup olmadığını takip eden ve kullanıcı değiştiğinde yeni kullanıcıyı response olarak dönen firebase metodu. bir kere çalıştır login logout takip eder.login ile bilgiler gelir bizde burada currentUser ın içine atarız, signout olunca bilgiler gider bizde currentUser ın içini güncelleriz (register ve logindeki email vs ye navbardan ulaşabilmek için). google ile giriş yapınca user ile displayname gelir ama email ile girecekseniz en üstte update kodunu firebase den çağırmalısınız.(userObserver)
+  
+
+  // Firebase-Methode, die überwacht, ob der Benutzer angemeldet ist, und den neuen Benutzer zurückgibt, wenn sich der Benutzer ändert.  
+  //? Sie wird einmal ausgeführt und verfolgt Login und Logout.  
+  //? Beim Login werden die Benutzerdaten abgerufen, die wir in `currentUser` speichern. Beim Logout werden die Daten entfernt, und wir aktualisieren den Inhalt von `currentUser`.  
+  //? (Z. B. um in der Navbar auf E-Mail und andere Informationen aus Register und Login zuzugreifen).  
+  //? Bei der Anmeldung mit Google wird der Benutzer mit `displayName` zurückgegeben. Wenn Sie sich jedoch mit einer E-Mail anmelden möchten, müssen Sie am Anfang den `update`-Code von Firebase aufrufen. (userObserver)
+
+
   const userTakip = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
